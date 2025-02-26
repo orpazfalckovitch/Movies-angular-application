@@ -1,0 +1,35 @@
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+
+  .poster {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #star {
+    font-size: 50px;
+    cursor: pointer;
+    color: grey;
+    &.selected {
+      color: gold;
+    }
+    &.unselected:hover {
+      color: gold;
+    }
+    &.selected:hover {
+      color: grey;
+    }
+  }
+}
