@@ -4,12 +4,18 @@ import { MoviesService } from '../../services/movies.service';
 import { CommonModule } from '@angular/common';
 import { MovieCardComponent } from '../../movie-card/movie-card/movie-card.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { HighlightDirective } from '../../directives/highlight.directive';
 
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.scss',
-  imports: [CommonModule, MovieCardComponent, MatPaginatorModule],
+  imports: [
+    CommonModule,
+    MovieCardComponent,
+    MatPaginatorModule,
+    HighlightDirective,
+  ],
 })
 export class MoviesComponent implements OnInit {
   movies: IMovie[] = [];

@@ -1,5 +1,10 @@
 <div class="movies-list">
-  <app-movie-card *ngFor="let movie of movies" [movie]="movie">
+  <app-movie-card
+    *ngFor="let movie of movies"
+    [movie]="movie"
+    class="movie-card"
+    appHighlight
+  >
   </app-movie-card>
 
   <div class="pagination">

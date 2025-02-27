@@ -1,18 +1,19 @@
 <div class="movie-card">
-  <i
-    id="star"
-    class="fa fa-star"
-    [ngClass]="{ selected: isSolid, unselected: !isSolid }"
-    (click)="toggleStar()"
-  ></i>
-
+  <div>
+    <i
+      id="star"
+      class="fa fa-star"
+      [ngClass]="{ selected: isSolid, unselected: !isSolid }"
+      (click)="toggleStar()"
+    ></i>
+  </div>
   <img
     class="poster"
     [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
     [alt]="movie.title"
   />
   <h2>{{ movie.title }}</h2>
-  <div>
+  <div class="description">
     <span>{{ movie.overview }}</span>
   </div>
   <p>{{ movie.release_date | monthYear }}</p>
