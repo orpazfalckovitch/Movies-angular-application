@@ -1,11 +1,11 @@
-<div class="movie-card">
+<div class="movie-card" *ngIf="movie">
   <div>
-    <i
+    <!-- <i
       id="star"
       class="fa fa-star"
       [ngClass]="{ selected: isSolid, unselected: !isSolid }"
       (click)="toggleStar()"
-    ></i>
+    ></i> -->
   </div>
   <img
     class="poster"

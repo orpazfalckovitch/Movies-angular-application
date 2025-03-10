@@ -1,0 +1,31 @@
+.movies-list-title {
+  color: blue;
+  text-align: center;
+}
+
+.type-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  .type-button {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    font-size: 18px;
+  }
+  .selected {
+    color: blue;
+    text-decoration: underline;
+  }
+}
+
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  margin-top: 15px;
+}

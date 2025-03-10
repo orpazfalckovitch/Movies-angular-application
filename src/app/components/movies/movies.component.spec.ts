@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideMockStore } from '@ngrx/store/testing';
+import { initialState } from '../../store/app.state';
 import { MoviesComponent } from './movies.component';
 
 describe('MoviesComponent', () => {
@@ -8,9 +10,9 @@ describe('MoviesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MoviesComponent]
-    })
-    .compileComponents();
+      imports: [MoviesComponent, HttpClientTestingModule],
+      providers: [provideMockStore({ initialState })],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MoviesComponent);
     component = fixture.componentInstance;

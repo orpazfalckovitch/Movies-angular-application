@@ -1,0 +1,40 @@
+<h1 class="movies-list-title">Movies list:</h1>
+
+<app-search (searchResults)="updateMovies($event)"></app-search>
+
+<div class="type-buttons">
+  <button
+    [ngClass]="{ selected: type == Type.Popular }"
+    class="type-button"
+    (click)="getMoviesList(Type.Popular)"
+  >
+    Popluar list
+  </button>
+  |
+  <button
+    [ngClass]="{ selected: type == Type.Favorites }"
+    class="type-button"
+    (click)="getMoviesList(Type.Favorites)"
+  >
+    Favorite list
+  </button>
+</div>
+
+<div class="movies-list">
+  <app-movie-card
+    *ngFor="let movie of movies"
+    [movie]="movie"
+    class="movie-card"
+    appHighlight
+  >
+  </app-movie-card>
+</div>
+
+<div class="pagination" *ngIf="totalPages > 1">
+  <mat-paginator
+    [length]="totalPages"
+    [pageSize]="pageSize"
+    [pageIndex]="currentPage"
+    (page)="pageChanged($event)"
+  ></mat-paginator>
+</div>
